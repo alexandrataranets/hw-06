@@ -27,8 +27,18 @@ max-width: 100%;
 
 .header-first {
 display: flex;
+padding: 18px 0;
 }
-
+@media only screen and (min-width: 767.98px) {
+  .header-first {
+    padding: 16px 0 0;
+    }
+}
+@media only screen and (min-width: 1157.98px) {
+  .header-first {
+    padding: 0;
+    }
+}
 header {
 border-bottom: 1px solid var(--color-border-light);
 box-shadow:0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -38,7 +48,8 @@ box-shadow:0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16
 /* width: 1158px; */
 width: 100%;
 margin: 0 auto;
-padding: 0 15px;
+/* padding:0 15px */
+padding: 0 16px;
 }
 /* Phone screen */
 @media screen and (min-width: 320px) {
@@ -58,6 +69,7 @@ padding: 0 15px;
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1158px;
+    padding: 0 15px;
     } 
 }
 
@@ -68,9 +80,18 @@ list-style-type: none;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media only screen and (max-width: 767.98px) {
+@media only screen and (min-width: 767.98px) {
   .header-contact {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+@media only screen and (min-width: 1157.98px) {
+  .header-contact {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
   }
 }
 .header-container {
@@ -153,7 +174,11 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 font-style: normal;
 margin-left: auto;
 }
-
+@media only screen and (max-width: 767.98px) {
+  .address {
+    display: none;
+    }
+}
 .address-link {
 color: var(--color-secondary-dark);
 font-size: 16px;
@@ -165,7 +190,16 @@ padding: 24px 0;
 display: inline-block;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+@media only screen and (min-width: 767.98px) {
+  .address-link {
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 1157.98px) {
+  .address-link {
+    padding: 24px 0;
+  }
+}
 .address-link:hover {
 color: var(--color-background);
 }
@@ -187,11 +221,13 @@ color: var(--color-background);
   cursor: pointer;
   margin-left: auto;
 }
+
 @media only screen and (min-width: 768px) {
   .header-menu-button {
     display: none;
   }
 }
+
 p, h1, h2, h3, h4, h5, h6 {
 margin: 0;
 }
@@ -215,7 +251,8 @@ background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
 flex-shrink: 0;
-padding: 188px 0;
+/* padding: 188px 0; */
+padding: 72px 0;
 margin-left: auto;
 margin-right: auto;
 }
