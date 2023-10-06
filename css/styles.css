@@ -62,6 +62,7 @@ padding: 0 16px;
 @media screen and (min-width: 768px) {
   .container {
     max-width: 732px;
+  
     } 
 }
 
@@ -78,6 +79,11 @@ display: flex;
 gap: 40px;
 list-style-type: none;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media only screen and (max-width: 767.98px) {
+  .header-contact {
+    display: none;
+    }
 }
 
 @media only screen and (min-width: 767.98px) {
@@ -174,11 +180,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 font-style: normal;
 margin-left: auto;
 }
-@media only screen and (max-width: 767.98px) {
-  .address {
-    display: none;
-    }
-}
+
 .address-link {
 color: var(--color-secondary-dark);
 font-size: 16px;
@@ -238,7 +240,18 @@ padding-left: 0;
 }
 
 .section {
-padding: 120px 0;
+/* padding: 120px 0; */
+padding: 96px 0;
+}
+@media only screen and (min-width: 768px) {
+  .section {
+    padding: 96px 0;
+    }
+}
+@media only screen and (min-width: 1158px) {
+  .section {
+    padding: 120px 0;
+    }
 }
 
 .hero-section {
@@ -261,6 +274,8 @@ margin-right: auto;
 @media only screen and (min-resolution: 192dpi) {
   .hero-section {
     max-width: 768px;
+    
+    padding: 112px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.70), 
     rgba(46, 47, 66, 0.70)), 
     url('../images/bg/bg_mob@2x.jpg');  
@@ -271,6 +286,7 @@ margin-right: auto;
 @media only screen and (min-width: 768px) {
   .hero-section {
     max-width: 768px;
+    padding: 188px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.70), 
     rgba(46, 47, 66, 0.70)), 
     url('../images/bg/bg_tabl.jpg');  
@@ -296,7 +312,7 @@ margin-right: auto;
 }
 @media only screen and (min-width: 1200px) and (min-resolution: 192dpi) {
   .hero-section {
-    max-width: 768px;
+    max-width: 1200px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.70), 
     rgba(46, 47, 66, 0.70)), 
     url('../images/bg/bg_desc@2x.jpg');  
@@ -304,17 +320,39 @@ margin-right: auto;
 }
 
 .hero-title {
-max-width: 496px;
+/* max-width: 496px; */
 margin: 0 auto;
 color: var(--color-primary);
 text-align: center;
-font-size: 56px;
 font-weight: 700;
-line-height: 1.07;
+/* font-size: 56px; */
+/* line-height: 1.07; */
+/* margin-bottom: 48px; */
+max-width: 216px;
 letter-spacing: 0.02em;
-margin-bottom: 48px;
+font-size: 36px;
+line-height: 1.11;
+margin-bottom: 72px;
+
 }
 
+/* Table screen */
+@media only screen and (min-width: 768px) {
+  .hero-title {
+    max-width: 496px;
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 36px;
+  }
+}
+
+/* Desctop screen */
+@media only screen and (min-width: 1158px) {
+  .hero-title {
+    margin-bottom: 48px;
+      
+  }
+}
 .button {
 color: var(--color-primary);
 background: var(--color-secondary);
@@ -448,6 +486,7 @@ margin-bottom: 8px;
     text-align: start;
   }
 } 
+
 /* Desctop screen */
 @media screen and (min-width: 1200px) {
   .club-subtitle {
@@ -460,10 +499,18 @@ margin-bottom: 8px;
 .club-text {
 color: var(--color-secondary-dark);
 font-size: 16px;
-font-weight: 400;
+font-weight: 500;
+/* font-weight: 400; */
 line-height: 1.5;
 letter-spacing: 0.02em;
 }
+
+/* Table screen */
+@media screen and (min-width: 1158px) {
+  .club-text {
+    font-weight: 400;
+  }
+} 
 
 .text {
 color: var(--color-secondary-dark);
@@ -665,7 +712,18 @@ border-top: none;
 
 .footer {
 background: var(--color-brand);
-padding: 100px 0;
+/* padding: 100px 0; */
+padding: 98px 0;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 96px 0;
+    }
+}
+@media screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+    }
 }
 
 .logo-footer {
@@ -688,7 +746,7 @@ display: inline-block;
 }
 
 .footer-text {
-max-width: 264px;
+/* max-width: 264px; */
 color: var(--color-secondary-light);
 font-size: 16px;
 font-weight: 400;
@@ -696,6 +754,17 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 margin-bottom: 72px;
 text-align: start;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-text {
+    max-width: 264px
+    }
+}
+@media screen and (min-width: 1158px) {
+  .footer-text {
+    max-width: 264px;
+    }
 }
 
 .footer-logo-club {
@@ -732,6 +801,10 @@ text-align: center;
     gap: 0;
     }
 }
+.media-icons {
+  margin-bottom: 72px; 
+}
+
 .media {
 display: flex;
 gap: 16px;
@@ -758,7 +831,6 @@ text-align: center;
 .footer-social {
 width: 40px;
 height: 40px;
-margin-bottom: 72px;
 }
 
 .footer-social-link {
